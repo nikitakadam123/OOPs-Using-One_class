@@ -1,11 +1,18 @@
 
 public class Customer {
-	private int custId[];
-	private String custName[];
-	private String custMobilno[];
+	private int custId;
+	private String custName;
+	private String custMobilno;
 	private Product prod[];
 	private Address addr;
-	public Customer(int custId[], String custName[], String custMobilno[], Product[] prod, Address addr) {
+	
+	private Bill bill;
+	
+	public Customer (Bill bill)
+	{
+		this.bill=bill;
+	}
+	public Customer(int custId, String custName, String custMobilno, Product[] prod, Address addr) {
 		
 		this.custId = custId;
 		this.custName = custName;
@@ -13,25 +20,32 @@ public class Customer {
 		this.prod = prod;
 		this.addr = addr;
 	}
-	//public Customer(int custId2, String custName2, String custMobilno2) {
-		// TODO Auto-generated constructor stub
-	//}
-	public int getCustId()[] {
+	
+	public Bill getBill()
+	{
+		return bill;
+	}
+	public void setBill(Bill bill)
+	{
+		this.bill=bill;
+	}
+	
+	public int getCustId() {
 		return custId;
 	}
-	public void setCustId(int custId[]) {
+	public void setCustId(int custId) {
 		this.custId = custId;
 	}
-	public String getCustName()[] {
+	public String getCustName() {
 		return custName;
 	}
-	public void setCustName(String custName[]) {
+	public void setCustName(String custName) {
 		this.custName = custName;
 	}
-	public String getCustMobilno()[] {
+	public String getCustMobilno() {
 		return custMobilno;
 	}
-	public void setCustMobilno(String custMobilno[]) {
+	public void setCustMobilno(String custMobilno) {
 		this.custMobilno = custMobilno;
 	}
 	public Product[] getProd() {
